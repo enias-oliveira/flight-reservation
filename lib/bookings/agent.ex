@@ -17,4 +17,8 @@ defmodule Flightex.Bookings.Agent do
 
     if agent, do: {:ok, agent}, else: {:error, "Booking not found"}
   end
+
+  def get_all do
+    Agent.get(__MODULE__, fn state -> state end)
+  end
 end
