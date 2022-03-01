@@ -1,7 +1,7 @@
 defmodule Flightex.Users.CreateOrUpdateTest do
   use ExUnit.Case, async: true
 
-  alias Flightex.Users.{Agent, CreateOrUpdate}
+  alias Flightex.Users.Agent
 
   describe "call/1" do
     setup do
@@ -18,7 +18,7 @@ defmodule Flightex.Users.CreateOrUpdateTest do
         cpf: "12345678900"
       }
 
-      CreateOrUpdate.call(params)
+      Flightex.create_or_update_user(params)
 
       {_ok, response} = Agent.get(params.cpf)
 
@@ -41,7 +41,7 @@ defmodule Flightex.Users.CreateOrUpdateTest do
 
       expected_response = {:error, "Cpf must be a String"}
 
-      response = CreateOrUpdate.call(params)
+      response = Flightex.create_or_update_user(params)
 
       assert response == expected_response
     end

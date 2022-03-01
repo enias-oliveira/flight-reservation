@@ -5,13 +5,6 @@
   "passed": [
     {
       "describe": "build/4",
-      "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/bookings/booking_test.exs",
-      "line": 7,
-      "module": "Elixir.Flightex.Bookings.BookingTest",
-      "test": "test build/4 when all params are valid, returns a booking"
-    },
-    {
-      "describe": "build/4",
       "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/users/users_test.exs",
       "line": 22,
       "module": "Elixir.Flightex.Users.UserTest",
@@ -25,6 +18,13 @@
       "test": "test build/4 when all params are valid, returns the user"
     },
     {
+      "describe": "build/4",
+      "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/bookings/booking_test.exs",
+      "line": 7,
+      "module": "Elixir.Flightex.Bookings.BookingTest",
+      "test": "test build/4 when all params are valid, returns a booking"
+    },
+    {
       "describe": "call/1",
       "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/bookings/create_or_update_test.exs",
       "line": 13,
@@ -32,25 +32,11 @@
       "test": "test call/1 when all params are valid, returns a valid tuple"
     },
     {
-      "describe": "get/1",
-      "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/users/user_agent_test.exs",
-      "line": 56,
-      "module": "Elixir.Flightex.Users.AgentTest",
-      "test": "test get/1 when the user is't founded, returns an error"
-    },
-    {
-      "describe": "get/1",
-      "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/users/user_agent_test.exs",
-      "line": 43,
-      "module": "Elixir.Flightex.Users.AgentTest",
-      "test": "test get/1 when the user is found, returns the user"
-    },
-    {
       "describe": "save/1",
-      "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/users/user_agent_test.exs",
-      "line": 18,
-      "module": "Elixir.Flightex.Users.AgentTest",
-      "test": "test save/1 when the user is saves, returns an tuple"
+      "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/bookings/booking_agent_test.exs",
+      "line": 15,
+      "module": "Elixir.Flightex.Bookings.AgentTest",
+      "test": "test save/1 when the param are valid, return a booking uuid"
     },
     {
       "describe": "get/1",
@@ -68,10 +54,31 @@
     },
     {
       "describe": "save/1",
-      "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/bookings/booking_agent_test.exs",
-      "line": 15,
-      "module": "Elixir.Flightex.Bookings.AgentTest",
-      "test": "test save/1 when the param are valid, return a booking uuid"
+      "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/users/user_agent_test.exs",
+      "line": 18,
+      "module": "Elixir.Flightex.Users.AgentTest",
+      "test": "test save/1 when the user is saves, returns an tuple"
+    },
+    {
+      "describe": "get/1",
+      "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/users/user_agent_test.exs",
+      "line": 56,
+      "module": "Elixir.Flightex.Users.AgentTest",
+      "test": "test get/1 when the user is't founded, returns an error"
+    },
+    {
+      "describe": "get/1",
+      "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/users/user_agent_test.exs",
+      "line": 43,
+      "module": "Elixir.Flightex.Users.AgentTest",
+      "test": "test get/1 when the user is found, returns the user"
+    },
+    {
+      "describe": "generate_report/2",
+      "file": "/home/enias/projects/ignite/elixir/flight-reservation/test/bookings/report_test.exs",
+      "line": 41,
+      "module": "Elixir.Flightex.Bookings.ReportTest",
+      "test": "test generate_report/2 when called, return the content"
     },
     {
       "describe": "generate/1",

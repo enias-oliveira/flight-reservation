@@ -1,7 +1,7 @@
 defmodule Flightex.Bookings.CreateOrUpdateTest do
   use ExUnit.Case, async: false
 
-  alias Flightex.Bookings.{Agent, CreateOrUpdate}
+  alias Flightex.Bookings.Agent
 
   describe "call/1" do
     setup do
@@ -18,7 +18,7 @@ defmodule Flightex.Bookings.CreateOrUpdateTest do
         user_id: "e9f7d281-b9f2-467f-9b34-1b284ed58f9e",
       }
 
-      {:ok, uuid} = CreateOrUpdate.call(params)
+      {:ok, uuid} = Flightex.create_or_update_booking(params)
 
       {:ok, response} = Agent.get(uuid)
 

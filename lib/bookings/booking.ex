@@ -24,9 +24,7 @@ defmodule Flightex.Bookings.CreateOrUpdate do
         local_origin: local_origin,
         user_id: user_id
       }) do
-    case Booking.build(complete_date, local_origin, local_destination, user_id) do
-      {:ok, user} -> Agent.save(user)
-      {:error, _reason} = error -> error
-    end
+    {:ok, user} = Booking.build(complete_date, local_origin, local_destination, user_id)
+    Agent.save(user)
   end
 end

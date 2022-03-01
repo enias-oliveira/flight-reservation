@@ -14,6 +14,7 @@ defmodule Flightex.Bookings.Report do
       |> Enum.map(fn {_order_id, order} -> parse_to_csv_line(order) end)
 
     File.write("report.csv", bookings)
+    {:ok, "Report generated successfully"}
   end
 
   defp build_bookings_list(),
